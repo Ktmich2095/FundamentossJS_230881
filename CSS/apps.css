@@ -1,0 +1,43 @@
+html{
+    box-sizing: border-box;
+    font-size: 62%;
+}
+body{
+    font-size: 1.6rem;
+    font-family: sans-serif;
+    background-color: aqua;
+}
+*,*:before, *:after{
+    box-sizing: inherit;
+}
+header{
+    padding: 3rem 0;
+}
+header h1{
+    text-align: center;
+    color: #ffffff;
+    font-size: 6rem;
+}
+header p{
+    color: blueviolet;
+    text-align: center;
+    font-size: 3.2rem;
+}
+header p a{
+    text-decoration: none;
+    color: rgb(181, 211, 211);
+}
+.DOM{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.DOM h2{
+    color: #fff;
+    text-align: center;
+}
+.DOM nav a{
+    color: #fff;
+}
+.DOM p{
+    color: black;
+}
