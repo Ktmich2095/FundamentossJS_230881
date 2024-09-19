@@ -5,10 +5,13 @@ Proyectos de Clase para la Unidad 1 de la asignatura de Aplicaciones Web Orienta
 Previo a inclinar el desarrollo de software para web usando el framework de NodeJS, realizaremos un par de prácticas de repaso en JavaScipt puro, con el objetivo de confirmar los conocimientos básicos de logica de programación.
 
 ## Historial de Prácticas
-|No.|Descripción|Estatus|
+|No.|Descripción|Potenciador|Estatus|
 |--|--|--|
-|1.|Metodologia de evaluación|Activa|
-|2.|Inicialización del proyecto de fundamentos de js|Activa|
+|1.|Metodologia de evaluación|1|Finalizada|
+|2.|Inicialización del proyecto de fundamentos de js|5|Activa|
+|3.|Declaración de Variables (Undefinied/Boolean/Number)|10|Activa|
+|4.|Declaración de Variables (String/BigInt/Symboll, null)|10|Activa|
+|5.|Introducción a Objectos |Activa|
 
 ### Autor 
 Michelle Casto Otero
