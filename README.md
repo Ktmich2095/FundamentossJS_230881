@@ -6,7 +6,7 @@ Previo a inclinar el desarrollo de software para web usando el framework de Node
 
 ## Historial de Prácticas
 |No.|Descripción|Potenciador|Estatus|
-|--|--|--|
+|--|--|--|--|
 |1.|Metodologia de evaluación|1|Finalizada|
 |2.|Inicialización del proyecto de fundamentos de js|5|Finalizada|
 |3.|Declaración de Variables (Undefinied/Boolean/Number)|10|Finalizada|
@@ -14,7 +14,7 @@ Previo a inclinar el desarrollo de software para web usando el framework de Node
 |5.|Introducción a Objectos |Activa|
 
 ### Autor 
-Michelle Casto Otero
+Michelle Castro Otero
 Unidad 1
 Aplicaciones Web Orientadas a Servicios 
 Septiembre - 2024
