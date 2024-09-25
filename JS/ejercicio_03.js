@@ -184,4 +184,74 @@ console.log("%c4.- Actualización de los valores de las propiedades de un objeto
 console.log(`El objeto actualmente tiene los siguientes valores`)
 console.log(JSON.stringify(Producto2, null, 2));
 //Connvierte el objeto de una cadena para evitar problemas con la referencia 
+console.log(`Por cuestiones de inflación el costo del producto ha cambiado y debe ser actualizado... de $6,829.00 a $6,915.50`)
 
+//Para modificar el valor de un objeto basta con igualar el nuevo valor de la propiedad
+Producto2.Precio=6915.50;
+console.log(`Los nuevos valores del Producto son:`)
+console.log(Producto2);
+
+// ¿Puedo cambiar no solo el valor sino el tipo de dato de un objeto en JS?
+
+console.log(`-----------------------------------------------------------------------------------`)
+console.log(`El objeto actualmente tiene los siguientes valores`)
+var tipoDisponibilidad= typeof(Producto2.Disponibilidad)
+console.log(`El tipo de dato de la disponibilidad es: ${tipoDisponibilidad}`)
+console.log(JSON.stringify(Producto2,null,2)); //Disponibilidad Boolean
+Producto2.Disponibilidad="Sí";
+let nuevoTipoDisponible= typeof(Producto2.Disponibilidad)
+console.log(Producto2);
+console.log(`El tipo de dato de la disponibilidad es: ${nuevoTipoDisponible}`)
+
+//SI
+//
+
+//Agregar nuevas propiedades a un objeto existente
+console.log("%c5.- Agregación de propiedades de un objeto", style_console);
+console.log("Objeto antes de ser modificado: ");
+console.table(Comprador);
+
+//Agregando propiedades
+Comprador['Direccion'] = "Granate #3, Luis Donaldo Colosio, Huauchinango, Puebla, México";
+Comprador['Tipo'] = "Premium";
+Comprador['Estatus'] = "Inactivo";
+Comprador['TotalCompras'] = 50000.00
+console.log("Objeto despues de ser modificado");
+console.table(Comprador)
+
+
+//Eliminar propiedades de un objeto existente
+console.log("%c6.- Eliminación de propiedades de un objeto (MUTACIÓN)", style_console);
+console.log("La estructura y valores del objeto PEDIDO son previos a la modificación:")
+console.table(Pedido)
+delete Pedido.TipoPago
+console.log("Despues de la modificación...")
+console.table(Pedido)
+
+console.log("%c7.- Métodos para controlar la mutabilidad de los Objetos, Congengelación (FREEZE)",style_console)
+//Si deseamos no permitir que los objetos sean modificados ni en estructura, ni en valor, utilizaremos el método FREEZE(conngelar)
+console.log('La estructura actual del objeto COMPRADOR es: ')
+console.table(Comprador)
+Object.freeze(Comprador)
+//Inteneramos agregar, eliminar o modificar los valores de sus propiedades
+Comprador.FechaUltimaCompra = "10/08/24 10:15:25"
+delete Comprador.Tipo;
+Comprador.Direccion="Narciso Mendoza #14, Los dicios, San Martin Texmelucan, Puebla"
+console.log("Verificamos si se realizaron los cambios en el objeto COMPRADOR")
+console.table(Comprador)
+
+console.log("%c8.- Métodos para controlar la mutabilidad de los objetos, sellado (SEAL)", style_console);
+//Sin embargo, en el caso que deseamos poder modificar los valores de las propiedades del objeto, pero no su estructura, usaremos SEAL
+console.log("Objeto antes de ser modificado")
+console.table(Pedido)
+//Sellamos el objeto
+Object.seal(Pedido)
+//Intentamos modificar su estructura
+Pedido['FechaPedido'] = "28/08/24 11:05:10"
+delete Pedido['Cantidad'];
+console.log('Verificamos si se realizaron los cambios en el Objeto PEDIDO')
+console.table(Pedido)
+//Ahora intentamos modificar el valor de las propiedades
+Pedido.Cantidad= 5
+console.log("Verificamos si se realizaron los cambios en el objeto PEDIDO")
+console.table(Pedido)
