@@ -255,3 +255,52 @@ console.table(Pedido)
 Pedido.Cantidad= 5
 console.log("Verificamos si se realizaron los cambios en el objeto PEDIDO")
 console.table(Pedido)
+
+//Destructuración de 2 o más objetos
+console.log("%c9.- Destructuración de 2 o más objetos", style_console);
+let{Precio:productoPrecio, Marca:productoMarca}=Producto
+let{Correo:clienteCorreo, PaisOrigen:clientePais, SaldoActual:clienteSaldo, Tipo:clienteTipo}=Comprador
+
+//Transformar valores cuantitativos en cualitativo
+if(productoPrecio>2000)
+    productoPrecio = "Caro"
+else
+    productoPrecio = "Barato"
+
+if(clienteSaldo > 0)
+    clienteSaldo = "A favor"
+else if (clienteSaldo < 0)
+    clienteSaldo = "En contra"
+else
+    clienteSaldo = "Sin deuda"
+
+//Transformar valores cualitativos en cuantitativos
+
+let clienteNivel;
+
+if(clienteTipo == "Premium")
+    clienteNivel = 1
+else if(clienteTipo == "Freemium")
+    clienteNivel = 2
+else if(clienteTipo == "No identificado")
+    clienteNivel = 3
+
+//Clasificamos al cliente por su País de Origen
+if(clientePais == "México")
+    clientePais = "Nacional"
+else
+    clientePais = "Extranjero"
+
+//OLE - Object Literal Enhacement
+
+let datosClientePromociones = (clienteCorreo,clientePais, clienteNivel, clienteSaldo, productoMarca, productoPrecio)
+
+//El nuevo objeto que creamos seria un ejemplo de la información que enviariamos el area de Marketing para la difusión de promociones
+console.log("Los datos del cliente y sus hábitos de compra son: ")
+console.table(datosClientePromociones)
+
+
+
+//Operaciones sobre objetos
+//Unión de objetos
+console.log("%c10.- Métodos para controlar la mutabilidad de los objetos, Sellado (SEAL)",style_console)
